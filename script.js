@@ -19,8 +19,16 @@ console.log("Average:", result.average);
 
 // Task 3: Remove duplicates from an array
 function removeDuplicates(array) {
-  // Using a Set to ensure unique values
-  const uniqueArray = [...new Set(array)]; // using built-in object Set to remove duplication + the shorthand ... to convert set back to an array.
+  // Create a new empty array to store unique values.
+  const uniqueArray = [];
+  // Loop through each item in the original array.
+  for (let item of array) {
+    // If the item is not already in the uniqueArray, add it.
+    if (!uniqueArray.includes(item)) {
+      uniqueArray.push(item);
+    }
+  }
+  // Return the array with duplicates removed.
   return uniqueArray;
 }
 
